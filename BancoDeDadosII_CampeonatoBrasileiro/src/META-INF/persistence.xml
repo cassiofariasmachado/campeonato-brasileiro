@@ -6,6 +6,7 @@
 	<class>br.unisinos.bd2.campeonato.brasileiro.Jogador</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Posicao</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Tecnico</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.Campeonato</class>
 	
     <properties>
 		<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/bd2" />
