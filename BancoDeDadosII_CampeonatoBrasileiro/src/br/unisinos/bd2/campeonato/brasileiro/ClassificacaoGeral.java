@@ -21,4 +21,13 @@ public class ClassificacaoGeral implements Serializable
 	// TODO: Clube
 	
 	// Metodos
+	public void setPosicao (int posicao)
+	{
+		this.posicao = posicao;
+	}
+	
+	public int getPosicao ()
+	{
+		return this.posicao;
+	}
 }
