@@ -7,6 +7,7 @@
 	<class>br.unisinos.bd2.campeonato.brasileiro.Posicao</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Tecnico</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Campeonato</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.ClassificacaoGeral</class>
 	
     <properties>
 		<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/bd2" />
