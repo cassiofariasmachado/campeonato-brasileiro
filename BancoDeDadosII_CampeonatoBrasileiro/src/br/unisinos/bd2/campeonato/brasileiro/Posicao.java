@@ -15,7 +15,7 @@ public class Posicao implements Serializable {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO, generator = "posicaoSeq")
-	@SequenceGenerator (name = "classificacaoSeq", sequenceName = "s_Classificacao", allocationSize = 1)
+	@SequenceGenerator (name = "posicaoSeq", sequenceName = "s_Posicao", allocationSize = 1)
 	private Long idPosicao;
 	
 	@Column (length = 50, nullable = true)
