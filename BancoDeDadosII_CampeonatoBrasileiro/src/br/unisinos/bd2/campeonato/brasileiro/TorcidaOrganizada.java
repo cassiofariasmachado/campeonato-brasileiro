@@ -17,8 +17,8 @@ public class TorcidaOrganizada implements Serializable
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO, generator = "TorcidaOrganizadaSeq")
-	@SequenceGenerator (name = "torcidaorganizadaSeq", sequenceName = "s_TorcidaOrganizada", allocationSize = 1)
+	@GeneratedValue (strategy = GenerationType.AUTO, generator = "torcidaOrganizadaSeq")
+	@SequenceGenerator (name = "torcidaOrganizadaSeq", sequenceName = "s_TorcidaOrganizada", allocationSize = 1)
 	private Long idTorcidaOrganizada;
 	
 	@Column (length = 50, nullable = true)
