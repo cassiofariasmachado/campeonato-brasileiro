@@ -5,6 +5,9 @@
 
 	<class>br.unisinos.bd2.campeonato.brasileiro.Campeonato</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.ClassificacaoGeral</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.Clube</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.ClubeDiretor</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.ClubePatrocinador</class>	
 	<class>br.unisinos.bd2.campeonato.brasileiro.ClubeTorcida</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Diretor</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Jogador</class>
@@ -12,8 +15,7 @@
 	<class>br.unisinos.bd2.campeonato.brasileiro.Posicao</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.Tecnico</class>
 	<class>br.unisinos.bd2.campeonato.brasileiro.TorcidaOrganizada</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.ClubeDiretor</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.ClubePatrocinador</class>	
+	
     
     <properties>
 		<property name="hibernate.connection.url" value="jdbc:postgresql://localhost/bd2" />
@@ -24,5 +26,6 @@
         <property name="hibernate.show_sql" value="true" />
         <property name="hibernate.hbm2ddl.auto" value="update"/>
     </properties>         
+    
 </persistence-unit>
 </persistence>
