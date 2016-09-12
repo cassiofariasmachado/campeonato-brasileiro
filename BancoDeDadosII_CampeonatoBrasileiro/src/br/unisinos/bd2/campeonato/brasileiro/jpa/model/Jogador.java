@@ -1,4 +1,4 @@
-package br.unisinos.bd2.campeonato.brasileiro;
+package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
 
 import java.io.Serializable;
 
@@ -12,6 +12,8 @@ import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Jogador implements Serializable{
+	
+	// Atributos
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -24,5 +26,34 @@ public class Jogador implements Serializable{
 	
 	@ManyToOne (optional = false)
 	private Posicao posicao;
+
+	// Metodos
+	public Long getIdJogador() {
+		return idJogador;
+	}
+
+	public void setIdJogador(Long idJogador) {
+		this.idJogador = idJogador;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Posicao getPosicao() {
+		return posicao;
+	}
+
+	public void setPosicao(Posicao posicao) {
+		this.posicao = posicao;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 }

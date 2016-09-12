@@ -1,4 +1,4 @@
-package br.unisinos.bd2.campeonato.brasileiro;
+package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
 
 import java.io.Serializable;
 
@@ -10,8 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class ClubeTorcida implements Serializable 
-{
+public class ClubeTorcida implements Serializable {
+	
 	// Atributos
 	private static final long serialVersionUID = 1L;
 	
@@ -34,4 +34,5 @@ public class ClubeTorcida implements Serializable
 	public void setIdClubeTorcida(Long idClubeTorcida) {
 		this.idClubeTorcida = idClubeTorcida;
 	}
+	
 }

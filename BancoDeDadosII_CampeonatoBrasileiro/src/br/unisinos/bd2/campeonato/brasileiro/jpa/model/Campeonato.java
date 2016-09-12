@@ -1,4 +1,4 @@
-package br.unisinos.bd2.campeonato.brasileiro;
+package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
 
 import java.io.Serializable;
 
@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class Campeonato implements Serializable
-{
+public class Campeonato implements Serializable {
+	
 	// Atributos
 	private static final long serialVersionUID = 1L;
 
@@ -30,33 +30,27 @@ public class Campeonato implements Serializable
 	private int nroClubes;
 	
 	// Metodos
-	public void setIdCampeonato (long id)
-	{
+	public void setIdCampeonato (long id) {
 		this.idCampeonato = id;
 	}
 	
-	public void setNome (String nome)
-	{
+	public void setNome (String nome) {
 		this.nome = nome;
 	}
 	
-	public void setNroClubes (int nro)
-	{
+	public void setNroClubes (int nro) {
 		this.nroClubes = nro;
 	}
 	
-	public long getIdCampeonato ()
-	{
+	public long getIdCampeonato () {
 		return this.idCampeonato;
 	}
 	
-	public String getNome ()
-	{
+	public String getNome () {
 		return this.nome;
 	}
 	
-	public int getNroClubes ()
-	{
+	public int getNroClubes () {
 		return this.nroClubes;
 	}
 	

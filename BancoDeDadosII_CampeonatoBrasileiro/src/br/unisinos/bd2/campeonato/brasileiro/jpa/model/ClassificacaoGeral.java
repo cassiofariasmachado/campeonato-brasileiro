@@ -1,4 +1,4 @@
-package br.unisinos.bd2.campeonato.brasileiro;
+package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
 
 import java.io.Serializable;
 
@@ -11,8 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class ClassificacaoGeral implements Serializable  
-{
+public class ClassificacaoGeral implements Serializable {
+	
 	// Atributos
 	private static final long serialVersionUID = 1L;
 	
@@ -31,13 +31,12 @@ public class ClassificacaoGeral implements Serializable
 	private Clube clube;
 	
 	// Metodos
-	public void setPosicao (int posicao)
-	{
+	public void setPosicao (int posicao) {
 		this.posicao = posicao;
 	}
 	
-	public int getPosicao ()
-	{
+	public int getPosicao () {
 		return this.posicao;
 	}
+	
 }

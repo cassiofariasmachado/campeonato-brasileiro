@@ -1,4 +1,6 @@
-package br.unisinos.bd2.campeonato.brasileiro;
+package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
+
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class Clube {
+public class Clube implements Serializable {
+	
+	// Atributos
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO, generator = "clubeSeq")

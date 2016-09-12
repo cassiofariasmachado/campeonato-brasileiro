@@ -1,4 +1,4 @@
-package br.unisinos.bd2.campeonato.brasileiro;
+package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
 
 import java.io.Serializable;
 
@@ -10,8 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class TorcidaOrganizada implements Serializable 
-{
+public class TorcidaOrganizada implements Serializable {
 
 	// Atributos
 	private static final long serialVersionUID = 1L;
@@ -25,23 +24,19 @@ public class TorcidaOrganizada implements Serializable
 	private String nome;
 	
 	// Metodos
-	public void setIdTorcidaOrganizada (long id)
-	{
+	public void setIdTorcidaOrganizada (long id) {
 		this.idTorcidaOrganizada = id;
 	}
 	
-	public void setNome (String nome)
-	{
+	public void setNome (String nome) {
 		this.nome = nome;
 	}
 	
-	public long getIdTorcidaOrganizada ()
-	{
+	public long getIdTorcidaOrganizada () {
 		return this.idTorcidaOrganizada;
 	}
 	
-	public String getNome ()
-	{
+	public String getNome () {
 		return this.nome;
 	}
 	
