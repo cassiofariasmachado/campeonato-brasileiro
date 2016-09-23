@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <!-- Elemento Complexo Posição -->
+    <xs:element name="posicao">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Posições -->
+    <xs:element name="posicoes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="posicao" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Diretor -->
+    <xs:element name="diretor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Patrocinador -->
+    <xs:element name="patrocinador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo TorcidaOrganizada -->
+    <xs:element name="torcidaOrganizada">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>    
+    </xs:element>
+    
+    <!-- Root -->
+    <xs:element name="campeonatos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="campeonato" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    <!-- PKs -->    
+    
+    <!-- Refs PKs -->
+    
+    </xs:element>  
+</xs:schema>
