@@ -1,10 +1,3 @@
-<<<<<<< HEAD:banco_de_dados_II-jpa_e_db4o/src/br/unisinos/bd2/campeonato/brasileiro/db4o/test/Test.java
-package br.unisinos.bd2.campeonato.brasileiro.db4o.test;
-
-public class Test {
-
-}
-=======
 package br.unisinos.bd2.campeonato.brasileiro.db4o.test;
 
 import java.util.ArrayList;
