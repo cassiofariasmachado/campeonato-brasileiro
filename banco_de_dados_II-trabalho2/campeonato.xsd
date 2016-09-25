@@ -54,9 +54,9 @@
     <xs:element name="ClassificacaoGeral">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="clube" minOccurs="1" maxOccurs="20" use="required"/>
                 <xs:element ref="campeonato" use="required" use="required"/>
                 <xs:element name="posicao" type="xs:positiveInteger" use="required"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded" use="required"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
@@ -76,10 +76,10 @@
     <xs:element name="ClubeDiretor">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="nome" type="xs:string"/>
+                <xs:element ref="diretor" minOccurs="1" maxOccurs="1" use="required"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1" use="required"/>
             </xs:sequence>
-            <xs:attribute ref="Diretor" minOccurs="1" maxOccurs="1"/>
-            <xs:attribute ref="Clube" minOccurs="1" maxOccurs="1"/>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
     </xs:element>
 
@@ -87,7 +87,8 @@
     <xs:element name="ClubePatrocinador">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="nome" type="xs:string"/>
+                <xs:element ref="patrocinador" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
