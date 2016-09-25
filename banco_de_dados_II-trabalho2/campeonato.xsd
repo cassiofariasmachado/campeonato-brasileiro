@@ -62,6 +62,17 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Elemento Complexo Tecnico-->
+    <xs:element name="Tecnico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="idTecnico" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="Nome" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
     <!-- Root -->
     <xs:element name="campeonatos">
         <xs:complexType>
