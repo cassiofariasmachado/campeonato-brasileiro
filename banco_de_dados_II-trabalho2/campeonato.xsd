@@ -68,8 +68,19 @@
             <xs:sequence>
                 <xs:element name="nome" type="xs:string"/>
             </xs:sequence>
-            <xs:attribute name="idTecnico" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="Tecnico" type="xs:positiveInteger" use="required"/>
             <xs:attribute name="Nome" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento Complexo ClubeDiretor-->
+    <xs:element name="ClubeDiretor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute ref="Diretor" minOccurs="1" maxOccurs="1"/>
+            <xs:attribute ref="Clube" minOccurs="1" maxOccurs="1"/>
         </xs:complexType>
     </xs:element>
 
