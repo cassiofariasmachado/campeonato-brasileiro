@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <!-- Elemento Complexo Posição -->
+    <xs:element name="posicao">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Posições -->
+    <xs:element name="posicoes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="posicao" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Diretor -->
+    <xs:element name="diretor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Patrocinador -->
+    <xs:element name="patrocinador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo TorcidaOrganizada -->
+    <xs:element name="torcidaOrganizada">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>    
+    </xs:element>
+
+    <!-- Elemento Complexo ClassificacaoGeral-->
+    <xs:element name="classificacaoGeral">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="campeonato" use="required" use="required"/>
+                <xs:element name="posicao" type="xs:positiveInteger" use="required"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded" use="required"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento Complexo Tecnico-->
+    <xs:element name="tecnico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Nome" type="xs:string" use="required"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento Complexo ClubeDiretor-->
+    <xs:element name="clubeDiretor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="diretor" minOccurs="1" maxOccurs="1" use="required"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1" use="required"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elemento Complexo ClubePatrocinador-->
+    <xs:element name="clubePatrocinador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="patrocinador" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Root -->
+    <xs:element name="campeonatos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="campeonato" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    <!-- PKs -->    
+    <xs:key name="pk_classificacao_geral">
+        <xs:selector xpath=".//classificacaoGeral"/>
+        <xs:field xpath-"@id"/>
+    </xs:key>
+
+    <xs:key name="pk_tecnico">
+        <xs:selector xpath=".//tecnico"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+
+    <xs:key name="pk_clubeDiretor">
+        <xs:selector xpath=".//clubeDiretor"/>
+        <xs:field xpath-"@id"/>
+    </xs:key>
+
+    <xs:key name="pk_clubePatrocinador">
+        <xs:selector xpath=".//clubePatrocinador"/>
+        <xs:field xpath-"@id"/>
+    </xs:key>
+
+    <xs:key name="">
+    </xs:key>
+
+    <xs:key name="">
+    </xs:key>
+
+    <!-- Refs PKs -->
+    <xs:keyref name="fk_campeonato" refer="pk_campeonato">
+        <!-- selector (???) -->
+        <xs:field="campeonato"/>
+    </xs:keyref>
+
+    <xs:keyref name="">
+    </xs:keyref>
+
+    <xs:keyref name="">
+    </xs:keyref>
+
+    <xs:keyref name="">
+    </xs:keyref>
+
+    <xs:keyref name="">
+    </xs:keyref>
+
+    <xs:keyref name="">
+    </xs:keyref>
+
+    </xs:element>  
+</xs:schema>
