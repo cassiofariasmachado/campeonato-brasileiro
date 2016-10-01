@@ -9,8 +9,15 @@ public class Patrocinador implements Serializable {
 	
 	private Long idPatrocinador;
 	
-	private String name;
-
+	private String nome;
+	
+	//Construtor
+	public Patrocinador(Long idPatrocinador, String nome) {
+		super();
+		this.idPatrocinador = idPatrocinador;
+		this.nome = nome;
+	}
+	
 	// Metodos
 	public Long getIdPatrocinador() {
 		return idPatrocinador;
@@ -20,12 +27,12 @@ public class Patrocinador implements Serializable {
 		this.idPatrocinador = idPatrocinador;
 	}
 
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String name) {
+		this.nome = name;
 	}
 		
 }

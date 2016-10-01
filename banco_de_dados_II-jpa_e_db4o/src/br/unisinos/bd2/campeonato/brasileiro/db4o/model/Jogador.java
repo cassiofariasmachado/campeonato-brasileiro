@@ -13,6 +13,14 @@ public class Jogador implements Serializable{
 	
 	private Posicao posicao;
 
+	// Construtor
+	public Jogador(Long idJogador, String nome, Posicao posicao) {
+		super();
+		this.idJogador = idJogador;
+		this.nome = nome;
+		this.posicao = posicao;
+	}
+	
 	// Metodos
 	public Long getIdJogador() {
 		return idJogador;
@@ -40,6 +48,5 @@ public class Jogador implements Serializable{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
-	}
-	
+	}	
 }

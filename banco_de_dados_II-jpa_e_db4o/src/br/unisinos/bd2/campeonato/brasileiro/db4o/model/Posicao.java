@@ -3,7 +3,7 @@ package br.unisinos.bd2.campeonato.brasileiro.db4o.model;
 import java.io.Serializable;
 
 public class Posicao implements Serializable {
-	
+
 	// Atributos
 	private static final long serialVersionUID = 1L;
 	
@@ -11,6 +11,12 @@ public class Posicao implements Serializable {
 	
 	private String nome;
 
+	// Construtor
+	public Posicao(Long idPosicao, String nome) {
+		this.idPosicao = idPosicao;
+		this.nome = nome;
+	}
+	
 	// Metodos
 	public Long getIdPosicao() {
 		return idPosicao;

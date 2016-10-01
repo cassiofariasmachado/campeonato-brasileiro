@@ -11,11 +11,18 @@ public class Diretor implements Serializable {
 	
 	private String nome;
 
+	// Construtor
+	public Diretor(Long idDiretor, String nome) {
+		super();
+		this.idDiretor = idDiretor;
+		this.nome = nome;
+	}
+	
 	// Metodos
 	public Long getIdDiretor() {
 		return idDiretor;
 	}
-
+	
 	public void setIdDiretor(Long idDiretor) {
 		this.idDiretor = idDiretor;
 	}

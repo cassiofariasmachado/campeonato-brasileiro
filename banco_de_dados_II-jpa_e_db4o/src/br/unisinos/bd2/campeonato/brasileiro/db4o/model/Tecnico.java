@@ -11,6 +11,12 @@ public class Tecnico implements Serializable  {
 	
 	private String nome;
 
+	// Construtor
+	public Tecnico(Long idTecnico, String nome) {
+		this.idTecnico = idTecnico;
+		this.nome = nome;
+	}
+	
 	// Metodos
 	public Long getIdTecnico() {
 		return idTecnico;
