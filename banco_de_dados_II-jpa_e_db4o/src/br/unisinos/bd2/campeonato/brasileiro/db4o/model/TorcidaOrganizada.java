@@ -12,6 +12,12 @@ public class TorcidaOrganizada implements Serializable {
 	private String nome;
 	
 	// Metodos
+	public TorcidaOrganizada(Long idTorcidaOrganizada, String nome){
+		super();
+		this.idTorcidaOrganizada = idTorcidaOrganizada; 
+		this.nome = nome;
+	}
+	
 	public void setIdTorcidaOrganizada (long id) {
 		this.idTorcidaOrganizada = id;
 	}
