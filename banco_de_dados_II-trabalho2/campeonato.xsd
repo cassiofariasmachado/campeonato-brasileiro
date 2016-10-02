@@ -20,11 +20,32 @@
         </xs:complexType>
     </xs:element>
     
+    <!-- Elemento Complexo Jogador -->
+    <xs:element name="jogador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="idPosicao" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
     <!-- Elemento Complexo Diretor -->
     <xs:element name="diretor">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Tecnico-->
+    <xs:element name="tecnico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Nome" type="xs:string"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
