@@ -75,19 +75,9 @@
     <xs:element name="classificacaoGeral">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="campeonato" use="required" use="required"/>
-                <xs:element name="posicao" type="xs:positiveInteger" use="required"/>
-                <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded" use="required"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
-        </xs:complexType>
-    </xs:element>
-
-    <!-- Elemento Complexo Tecnico-->
-    <xs:element name="tecnico">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="Nome" type="xs:string" use="required"/>
+                <xs:element ref="campeonato"/>
+                <xs:element name="posicao" type="xs:positiveInteger"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
@@ -97,8 +87,8 @@
     <xs:element name="clubeDiretor">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="diretor" minOccurs="1" maxOccurs="1" use="required"/>
-                <xs:element ref="clube" minOccurs="1" maxOccurs="1" use="required"/>
+                <xs:element ref="diretor" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
@@ -118,23 +108,23 @@
     <xs:element name="clube">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Nome" type="xs:string" maxLength="50" use="required"/>
-				<xs:element name="Jogador1" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador2" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador3" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador4" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador5" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador6" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador7" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador8" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador9" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador10" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador11" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador12" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador13" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador14" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador15" type="xs:positiveInteger" use="required"/>
-				<xs:element name="Jogador16" type="xs:positiveInteger" use="required"/>
+                <xs:element name="nome" type="xs:string" maxLength="50"/>
+				<xs:element name="Jogador1" type="xs:positiveInteger"/>
+				<xs:element name="Jogador2" type="xs:positiveInteger"/>
+				<xs:element name="Jogador3" type="xs:positiveInteger"/>
+				<xs:element name="Jogador4" type="xs:positiveInteger"/>
+				<xs:element name="Jogador5" type="xs:positiveInteger"/>
+				<xs:element name="Jogador6" type="xs:positiveInteger"/>
+				<xs:element name="Jogador7" type="xs:positiveInteger"/>
+				<xs:element name="Jogador8" type="xs:positiveInteger"/>
+				<xs:element name="Jogador9" type="xs:positiveInteger"/>
+				<xs:element name="Jogador10" type="xs:positiveInteger"/>
+				<xs:element name="Jogador11" type="xs:positiveInteger"/>
+				<xs:element name="Jogador12" type="xs:positiveInteger"/>
+				<xs:element name="Jogador13" type="xs:positiveInteger"/>
+				<xs:element name="Jogador14" type="xs:positiveInteger"/>
+				<xs:element name="Jogador15" type="xs:positiveInteger"/>
+				<xs:element name="Jogador16" type="xs:positiveInteger"/>
             </xs:sequence>
 			<xs:attribute name="id" type="xs:positiveInteger" use="required" />
         </xs:complexType>
@@ -149,6 +139,26 @@
         </xs:complexType>
     </xs:element>
 	
+    <!-- Elemento Complexo Rodadas-->
+    <xs:element name="rodada">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clube1Gol" type="xs:positiveInteger"/>
+                <xs:element name="clube2Gol" type="xs:positiveInteger"/>
+                <xs:element name="clube1Ponto" type="xs:positiveInteger"/>
+                <xs:element name="clube2Ponto" type="xs:positiveInteger"/>
+                <xs:element name="clube1Amarelo" type="xs:positiveInteger"/>
+                <xs:element name="clube2Amarelo" type="xs:positiveInteger"/>
+                <xs:element name="clube1Vermelho" type="xs:positiveInteger"/>
+                <xs:element name="clube2Vermelho" type="xs:positiveInteger"/>
+            </xs:sequence>
+            <xs:attribute name="idCampeonato" type="xs:positiveInteger" use="required" />
+            <xs:attribute name="idRodada" type="xs:positiveInteger" use="required" />
+            <xs:attribute name="idClube1" type="xs:positiveInteger" use="required" />
+            <xs:attribute name="idClube2" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
 	<!-- Elemento Complexo Rodadas-->
     <xs:element name="rodadas">
         <xs:complexType>
@@ -162,9 +172,9 @@
     <xs:element name="campeonato">
         <xs:complexType>
             <xs:sequence>
-				<xs:element name="Nome" type="xs:string" maxLength="50" use="optional"/>
-				<xs:element name="Ano" type="xs:positiveInteger" use="optional"/>
-				<xs:element name="NroClubes" type="xs:positiveInteger" use="optional"/>
+				<xs:element name="Nome" type="xs:string" maxLength="50"/>
+				<xs:element name="Ano" type="xs:positiveInteger"/>
+				<xs:element name="NroClubes" type="xs:positiveInteger"/>
                 <xs:element ref="clubes" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="rodadas" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
@@ -179,17 +189,37 @@
                 <xs:element ref="campeonato" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
-    <!-- PKs -->    
-    <xs:key name="pk_classificacao_geral">
-        <xs:selector xpath=".//classificacaoGeral"/>
+    <!-- PKs -->
+    <xs:key name="pk_posicao">
+        <xs:selector xpath=".//posicao"/>
         <xs:field xpath="@id"/>
     </xs:key>
-
+    
+    <xs:key name="pk_jogador">
+        <xs:selector xpath=".//jogador"/>
+        <xs:field xpath="@id"/>
+    </xs:key> 
+        
+    <xs:key name="pk_diretor">
+        <xs:selector xpath=".//diretor"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+    
     <xs:key name="pk_tecnico">
         <xs:selector xpath=".//tecnico"/>
         <xs:field xpath="@id"/>
     </xs:key>
-
+    
+    <xs:key name="pk_patrocinador">
+        <xs:selector xpath=".//patrocinador"/>
+        <xs:field xpath="@id"/>
+    </xs:key>    
+        
+    <xs:key name="pk_classificacao_geral">
+        <xs:selector xpath=".//classificacaoGeral"/>
+        <xs:field xpath="@id"/>
+    </xs:key>
+        
     <xs:key name="pk_clubeDiretor">
         <xs:selector xpath=".//clubeDiretor"/>
         <xs:field xpath="@id"/>
@@ -211,9 +241,14 @@
     </xs:key>
 
     <!-- Refs PKs -->
+    <xs:keyref name="fk_jogador_posicao" refer="pk_posicao">
+        <xs:selector xpath="jogador"/>
+        <xs:field xpath="idPosicao"/>
+    </xs:keyref>
+       
     <xs:keyref name="fk_campeonato_classificacaoGeral" refer="pk_campeonato">
         <xs:selector xpath="campeonato"/>
-        <xs:field="idCampeonato"/>
+        <xs:field xpath="idCampeonato"/>
     </xs:keyref>
 
     <xs:keyref name="fk_clube_jogador1" refer="pk_jogador">
@@ -295,18 +330,6 @@
 		<xs:selector xpath="campeonato/clubes/clube"/> 
 		<xs:field xpath="Jogador16"/>
 	</xs:keyref>
-	
-    <xs:keyref name="">
-    </xs:keyref>
-
-    <xs:keyref name="">
-    </xs:keyref>
-
-    <xs:keyref name="">
-    </xs:keyref>
-
-    <xs:keyref name="">
-    </xs:keyref>
-
+        
     </xs:element>  
 </xs:schema>
