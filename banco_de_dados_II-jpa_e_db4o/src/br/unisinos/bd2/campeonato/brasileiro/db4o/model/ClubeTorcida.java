@@ -14,6 +14,13 @@ public class ClubeTorcida implements Serializable {
 	private Clube clube;
 
 	// Metodos
+	public ClubeTorcida(Long idClubeTorcida, TorcidaOrganizada torcida, Clube clube){
+		super();
+		this.idClubeTorcida = idClubeTorcida;
+		this.torcidaOrganizada = torcida;
+		this.clube = clube;
+	}
+	
 	public Long getIdClubeTorcida() {
 		return idClubeTorcida;
 	}

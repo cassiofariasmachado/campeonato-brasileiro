@@ -44,6 +44,30 @@ public class Clube implements Serializable {
 	private Long jogador16;
 	
 	// Metodos
+	public Clube(Long idClube, String nome, Long jogador1, Long jogador2, Long jogador3, 
+			Long jogador4, Long jogador5, Long jogador6, Long jogador7, Long jogador8, Long jogador9, Long jogador10,
+			Long jogador11, Long jogador12, Long jogador13, Long jogador14, Long jogador15, Long jogador16){
+		super();
+		this.idClube = idClube;
+		this.nome = nome;
+		this.jogador1 = jogador1;
+		this.jogador2 = jogador2;
+		this.jogador3 = jogador3;
+		this.jogador4 = jogador4;
+		this.jogador5 = jogador5;
+		this.jogador6 = jogador6;
+		this.jogador7 = jogador7;
+		this.jogador8 = jogador8;
+		this.jogador9 = jogador9;
+		this.jogador10 = jogador10;
+		this.jogador11 = jogador11;
+		this.jogador12 = jogador12;
+		this.jogador13 = jogador13;
+		this.jogador14 = jogador14;
+		this.jogador15 = jogador15;
+		this.jogador16 = jogador16;
+	}
+	
 	public Long getIdClube() {
 		return idClube;
 	}

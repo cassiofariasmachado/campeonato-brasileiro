@@ -16,6 +16,14 @@ public class Campeonato implements Serializable {
 	private int nroClubes;
 	
 	// Metodos
+	public Campeonato(Long idCampeonato, String nome, int ano, int nroClubes){
+		super();
+		this.idCampeonato = idCampeonato;
+		this.nome = nome;
+		this.ano = ano;
+		this.nroClubes = nroClubes;
+	}
+	
 	public void setIdCampeonato (long id) {
 		this.idCampeonato = id;
 	}
