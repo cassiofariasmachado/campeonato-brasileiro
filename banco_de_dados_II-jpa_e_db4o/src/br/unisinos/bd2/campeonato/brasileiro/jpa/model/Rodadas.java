@@ -33,7 +33,7 @@ public class Rodadas implements Serializable{
 	
 	@Column (nullable = true)
 	private int totalVermelhos;
-	
+	 
 	@Column (nullable = true)
 	private int totalGols;
 	
@@ -48,7 +48,6 @@ public class Rodadas implements Serializable{
 
 	public void setArtilheiro(Jogador artilheiro) {
 		this.artilheiro = artilheiro;
-	}
-	
+	}	
 	
 }
