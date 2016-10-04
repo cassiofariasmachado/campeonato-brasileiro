@@ -35,6 +35,23 @@ public class Jogos implements Serializable{
 	
 	//Métodos
 	
+	public Jogos(Long idJogo, Campeonato campeonato, Rodadas rodada, Clube clube1, Clube clube2, int clube1Gol, int clube2Gol, int clube1Ponto, int clube2Ponto, int clube1Amarelo, int clube2Amarelo, int clube1Vermelho, int clube2Vermelho){
+		super();
+		this.idJogo = idJogo;
+		this.campeonato = campeonato;
+		this.rodada = rodada;
+		this.clube1 = clube1;
+		this.clube2 = clube2;
+		this.clube1Gol = clube1Gol;
+		this.clube2Gol = clube2Gol;
+		this.clube1Ponto = clube1Ponto;
+		this.clube2Ponto = clube2Ponto;
+		this.clube1Amarelo = clube1Amarelo;
+		this.clube2Amarelo = clube2Amarelo;
+		this.clube1Vermelho = clube1Vermelho;
+		this.clube2Vermelho = clube2Vermelho;
+	}
+	
 	public Long getIdJogo() {
 		return idJogo;
 	}
