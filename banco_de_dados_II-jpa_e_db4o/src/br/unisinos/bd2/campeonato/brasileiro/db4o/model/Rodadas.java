@@ -24,6 +24,17 @@ public class Rodadas implements Serializable{
 	
 	//Métodos
 	
+	public Rodadas(Long idRodada, Campeonato campeonato, Jogador artilheiro, int totalJogos, int totalAmarelos, int totalVermelhos, int totalGols){
+		super();
+		this.idRodada = idRodada;
+		this.campeonato = campeonato;
+		this.artilheiro = artilheiro;
+		this.totalJogos = totalJogos;
+		this.totalAmarelos = totalAmarelos;
+		this.totalVermelhos = totalVermelhos;
+		this.totalGols = totalGols;
+	}
+	
 	public Long getIdRodada() {
 		return idRodada;
 	}

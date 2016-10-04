@@ -23,9 +23,15 @@ public class Test {
 		Diretor diretor = new Diretor(new Long(1), "Cássio Machado");
 		db.store(diretor);
 		
+		Diretor diretor2 = new Diretor(new Long(2), "Fernando Carvalho");
+		db.store(diretor2);
+		
 		// Cria um tecnico e adiciona no db
 		Tecnico tecnico = new Tecnico (new Long(1), "Celso Roth");
 		db.store(tecnico);
+		
+		Tecnico tecnico2 = new Tecnico (new Long(2), "Abel Braga");
+		db.store(tecnico2);
 		
 		// Cria um patrocinador e adiciona no db
 		Patrocinador patrocinador = new Patrocinador (new Long(1), "Banrisul");
@@ -93,6 +99,53 @@ public class Test {
 		Jogador jogador16 = new Jogador (new Long(16), "Negueba", posicaoAtacante);
 		db.store(jogador16);
 		
+		Jogador jogador17 = new Jogador (new Long(17), "Alisson", posicaoGoleiro);
+		db.store(jogador17);
+		
+		Jogador jogador18 = new Jogador (new Long(18), "Ceará", posicaoZagueiro);
+		db.store(jogador18);
+		
+		Jogador jogador19 = new Jogador (new Long(19), "Rodrigo Dourado", posicaoZagueiro);
+		db.store(jogador19);
+		
+		Jogador jogador20 = new Jogador (new Long(20), "Índio", posicaoZagueiro);
+		db.store(jogador20);
+		
+		Jogador jogador21 = new Jogador (new Long(21), "Gamarra", posicaoZagueiro);
+		db.store(jogador21);
+		
+		Jogador jogador22 = new Jogador (new Long(22), "Falcão", posicaoMeia);
+		db.store(jogador22);
+		
+		Jogador jogador23 = new Jogador (new Long(23), "Guinazu", posicaoMeia);
+		db.store(jogador23);
+		
+		Jogador jogador24 = new Jogador (new Long(24), "D'Alessandro", posicaoMeia);
+		db.store(jogador24);
+		
+		Jogador jogador25 = new Jogador (new Long(25), "Tinga", posicaoMeia);
+		db.store(jogador25);
+		
+		Jogador jogador26 = new Jogador (new Long(26), "Rafael Sobis", posicaoAtacante);
+		db.store(jogador26);
+		
+		Jogador jogador27 = new Jogador (new Long(27), "Fernandão", posicaoAtacante);
+		db.store(jogador27);
+		
+		Jogador jogador28 = new Jogador (new Long(28), "Taffarel", posicaoGoleiro);
+		db.store(jogador28);
+		
+		Jogador jogador29 = new Jogador (new Long(29), "Iarley", posicaoAtacante);
+		db.store(jogador29);
+		
+		Jogador jogador30 = new Jogador (new Long(30), "Alex", posicaoMeia);
+		db.store(jogador30);
+		
+		Jogador jogador31 = new Jogador (new Long(31), "Alexandre Pato", posicaoAtacante);
+		db.store(jogador31);
+		
+		Jogador jogador32 = new Jogador (new Long(32), "William", posicaoZagueiro);
+		db.store(jogador32);
 		
 		// Cria um clube e adiciona no db
 		Clube clube = new Clube(new Long(1), "Grêmio Foot-Ball Porto Alegrense", 
@@ -101,13 +154,34 @@ public class Test {
 				jogador9.getIdJogador(), jogador10.getIdJogador(), jogador11.getIdJogador(), jogador12.getIdJogador(),
 				jogador13.getIdJogador(), jogador14.getIdJogador(), jogador15.getIdJogador(), jogador16.getIdJogador());
 		
+		Clube clube2 = new Clube(new Long(2), "Sport Club Internacional", 
+				jogador28.getIdJogador(), jogador17.getIdJogador(), jogador18.getIdJogador(), jogador19.getIdJogador(), 
+				jogador20.getIdJogador(), jogador21.getIdJogador(), jogador22.getIdJogador(), jogador23.getIdJogador(), 
+				jogador24.getIdJogador(), jogador25.getIdJogador(), jogador26.getIdJogador(), jogador27.getIdJogador(),
+				jogador29.getIdJogador(), jogador30.getIdJogador(), jogador31.getIdJogador(), jogador32.getIdJogador());
+		
 		// Cria TorcidaOrganizada e adiciona no db
 		TorcidaOrganizada torcidaOrganizada = new TorcidaOrganizada(new Long(1), "Geral do Grêmio");
 		db.store(torcidaOrganizada);
 		
+		TorcidaOrganizada torcidaOrganizada2 = new TorcidaOrganizada(new Long(2), "Camisa 12");
+		db.store(torcidaOrganizada2);
+		
 		// Cria ClubeTorcida e adiciona no db
 		ClubeTorcida clubeTorcida = new ClubeTorcida(new Long(1), torcidaOrganizada, clube);
 		db.store(clubeTorcida);
+		
+		ClubeTorcida clubeTorcida2 = new ClubeTorcida(new Long(2), torcidaOrganizada2, clube2);
+		db.store(clubeTorcida2);
+		
+		//Cria uma rodada e adiciona no db
+		Rodadas rodada = new Rodadas(new Long(1), campeonato, jogador26, 1, 3, 0, 6);
+		db.store(rodada);
+		
+		//Cria um jogo e adiciona no db
+		Jogos jogo = new Jogos(new Long(1), campeonato, rodada, clube, clube2, 2, 4, 0, 3, 1, 2, 0, 0);
+		db.store(jogo);
+		
 		
 		// Query diretor
 		List<Diretor> listaDiretor = db.query (Diretor.class);
