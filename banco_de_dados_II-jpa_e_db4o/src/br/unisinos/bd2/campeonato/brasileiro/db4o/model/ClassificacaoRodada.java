@@ -17,48 +17,59 @@ public class ClassificacaoRodada implements Serializable{
 		
 	private Clube clube;
 	
+	// Construtor
+	public ClassificacaoRodada(Long idClassificacaoRodada, Campeonato campeonato, Rodadas rodada, int posicao,
+			Clube clube) {
+		super();
+		this.idClassificacaoRodada = idClassificacaoRodada;
+		this.campeonato = campeonato;
+		this.rodada = rodada;
+		this.posicao = posicao;
+		this.clube = clube;
+	}
+	
 	// Metodos
-		public Long getIdClassificacaoRodada() {
-			return idClassificacaoRodada;
-		}
+	public Long getIdClassificacaoRodada() {
+		return idClassificacaoRodada;
+	}
 
-		public void setIdClassificacaoRodada(Long idClassificacaoRodada) {
+	public void setIdClassificacaoRodada(Long idClassificacaoRodada) {
 			this.idClassificacaoRodada = idClassificacaoRodada;
-		}
+	}
 		
-		public Rodadas getRodada() {
-			return rodada;
-		}
+	public Rodadas getRodada() {
+		return rodada;
+	}
 
-		public void setRodada(Rodadas rodada) {
-			this.rodada = rodada;
-		}
+	public void setRodada(Rodadas rodada) {
+		this.rodada = rodada;
+	}
 		
-		public Campeonato getCampeonato() {
-			return campeonato;
-		}
+	public Campeonato getCampeonato() {
+		return campeonato;
+	}
 
-		public void setCampeonato(Campeonato campeonato) {
-			this.campeonato = campeonato;
-		}
+	public void setCampeonato(Campeonato campeonato) {
+		this.campeonato = campeonato;
+	}
 		
-		public int getPosicao() {
-			return posicao;
-		}
+	public int getPosicao() {
+		return posicao;
+	}
 
-		public void setPosicao(int posicao) {
-			this.posicao = posicao;
-		}
+	public void setPosicao(int posicao) {
+		this.posicao = posicao;
+	}
 		
-		public Clube getClube() {
-			return clube;
-		}
+	public Clube getClube() {
+		return clube;
+	}
 
-		public void setClube(Clube clube) {
-			this.clube = clube;
-		}
-		
-		public static long getSerialversionuid() {
-			return serialVersionUID;
-		}
+	public void setClube(Clube clube) {
+		this.clube = clube;
+	}
+	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 }
