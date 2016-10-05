@@ -13,7 +13,15 @@ public class ClubePatrocinador implements Serializable
 	private Clube idClube;
 	
 	private Patrocinador idPatrocinador;
-
+	
+	public ClubePatrocinador (Long id, Clube clube, Patrocinador patrocinador)
+	{
+	    super ();
+	    this.idClubePatrocinador = idClubePatrocinador;
+	    this.idClube = idClube;
+	    this.idPatrocinador = idPatrocinador;
+	}
+	
 	public Long getIdClubePatrocinador() {
 		return idClubePatrocinador;
 	}
