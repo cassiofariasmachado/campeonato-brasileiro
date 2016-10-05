@@ -14,6 +14,15 @@ public class ClubeDiretor implements Serializable {
 	private Clube idClube;
 
 	// Metodos
+	
+	public ClubeDiretor (Long id, Diretor diretor, Clube clube)
+	{
+	    super ();
+	    this.idClubeDiretor = id;
+	    this.idDiretor = diretor;
+	    this.idClube = clube;
+	}
+	
 	public Long getIdClubeDiretor() {
 		return idClubeDiretor;
 	}
