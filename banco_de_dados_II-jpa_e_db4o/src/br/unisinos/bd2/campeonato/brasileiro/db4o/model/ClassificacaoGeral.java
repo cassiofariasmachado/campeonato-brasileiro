@@ -16,7 +16,7 @@ public class ClassificacaoGeral implements Serializable {
 	private Clube clube;
 
 	// Metodos
-	public ClassificacaoGeral (Long id, Campenato campeonato, int posicao, Clube clube)
+	public ClassificacaoGeral (Long id, Campeonato campeonato, int posicao, Clube clube)
 	{
 	    super ();
 	    this.idClassificacaoGeral = id;
