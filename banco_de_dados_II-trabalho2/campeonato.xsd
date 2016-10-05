@@ -160,7 +160,6 @@
     <xs:element name="classificacaoGeral">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="campeonato"/>
                 <xs:element name="posicao" type="xs:positiveInteger"/>
                 <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
@@ -215,9 +214,9 @@
 				<xs:element name="nome" type="xs:string" />
 				<xs:element name="ano" type="xs:positiveInteger"/>
 				<xs:element name="nroClubes" type="xs:positiveInteger"/>
-                <xs:element ref="clubes" minOccurs="1" maxOccurs="unbounded"/>
-                <xs:element ref="rodadas" minOccurs="1" maxOccurs="unbounded"/>
-                <xs:element ref="classificacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="clubes" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="rodadas" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="classificacoesGerais" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
 			<xs:attribute name="id" type="xs:positiveInteger" use="required" />
         </xs:complexType>
