@@ -36,6 +36,9 @@ public class Test {
 		// Cria um patrocinador e adiciona no db
 		Patrocinador patrocinador = new Patrocinador (new Long(1), "Banrisul");
 		db.store(patrocinador);
+
+		Patrocinador patrocinador2 = new Patrocinador (new Long(2), "Nike");
+		db.store(patrocinador2);
 		
 		// Cria um posicao e adiciona no db
 		Posicao posicaoAtacante = new Posicao (new Long(1), "Atancante");
@@ -174,6 +177,34 @@ public class Test {
 		ClubeTorcida clubeTorcida2 = new ClubeTorcida(new Long(2), torcidaOrganizada2, clube2);
 		db.store(clubeTorcida2);
 		
+    // ClubeDiretor
+    Clubediretor clubeDiretor = new ClubeDiretor (new Long (1),diretor,clube);
+    db.store (clubeDiretor);
+
+    Clubediretor clubeDiretor2 = new ClubeDiretor (new Long (2),diretor2,clube2);
+    db.store (clubeDiretor2);
+
+    // ClubePatrocinador
+    ClubePatrocinador clubePatrocinador = new (new Long (1),clube,patrocinador);
+    db.store (clubePatrocinador);
+
+    ClubePatrocinador clubePatrocinador2 = new (new Long (1),clube2,patrocinador2);
+    db.store (clubePatrocinador2);
+
+    // Tecnico Clube
+    //ClubeTecnico clubeTecnico = new (new Long (1),,)
+    //db.store (clubeTecnico);
+
+    //ClubeTecnico clubeTecnico2 = new (new Long (1),,)
+    //db.store (clubeTecnico2);
+
+    // Classificacao Geral
+    ClassificacaoGeral classificacaoGeral = new (new Long (1),campeonato,1,clube);
+    db.store (classificacaoGeral);
+
+    ClassificacaoGeral classificacaoGeral2= new (new Long (1),campeonato,1,clube2);
+    db.store (classificacaoGeral2);
+
 		//Cria uma rodada e adiciona no db
 		Rodadas rodada = new Rodadas(new Long(1), campeonato, jogador26, 1, 3, 0, 6);
 		db.store(rodada);
@@ -265,6 +296,30 @@ public class Test {
 					ObjectInfo oi = db.ext().getObjectInfo(walker);
 					System.out.println("ID Gerado: " + oi.getInternalID() + "Nome: " + walker.getNome());
 				}
+		
+		// Query ClubeDiretor
+		
+				List<ClubeDiretor> listaClubeDiretor = new ArrayList<> ();
+				listaClubeDiretor = db.query (ClubeDiretor.class);
+				for (ClubeDiretor walker : listaClubeDiretor) {
+					ObjectInfo oi = db.ext().getObjectInfo(walker);
+					System.out.println("ID Gerado: " + oi.getInternalID() + "Nome: " + walker.getNome());
+				}
+
+				List<ClubePatrocinador> listaClubePatrocinador = new ArrayList<> ();
+				listaClubePatrocinador = db.query (ClubePatrocinador.class);
+				for (ClubePatrocinador walker : listaClubePatrocinador) {
+					ObjectInfo oi = db.ext().getObjectInfo(walker);
+					System.out.println("ID Gerado: " + oi.getInternalID() + "Nome: " + walker.getNome());
+				}
+
+				List<ClassificacaoGeral> listaClassificacaoGeral = new ArrayList<> ();
+				listaClassificacaoGeral = db.query (ClassificacaoGeral.class);
+				for (ClassificacaoGeral walker : listaClassificacaoGeral) {
+					ObjectInfo oi = db.ext().getObjectInfo(walker);
+					System.out.println("ID Gerado: " + oi.getInternalID() + "Nome: " + walker.getNome());
+				}
+
 		// DBClose
 		db.close();
 	}
