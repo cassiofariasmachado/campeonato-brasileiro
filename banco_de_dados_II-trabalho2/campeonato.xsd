@@ -41,13 +41,12 @@
         </xs:complexType>
     </xs:element>
     
-    <!-- Elemento Complexo Tecnico-->
-    <xs:element name="tecnico">
+    <!-- Elemento Complexo Diretores-->
+    <xs:element name="diretores">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Nome" type="xs:string"/>
+                <xs:element ref="diretor" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
-            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>
     </xs:element>
     
@@ -61,6 +60,15 @@
         </xs:complexType>
     </xs:element>
     
+    <!-- Elemento Complexo Patrocinadores-->
+    <xs:element name="patrocinadores">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="patrocinador" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
     <!-- Elemento Complexo TorcidaOrganizada -->
     <xs:element name="torcidaOrganizada">
         <xs:complexType>
@@ -70,36 +78,12 @@
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         </xs:complexType>    
     </xs:element>
-
-    <!-- Elemento Complexo ClassificacaoGeral-->
-    <xs:element name="classificacaoGeral">
+    
+    <!-- Elemento Complexo TorcidasOrganizadas -->
+    <xs:element name="torcidasOrganizadas">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="campeonato"/>
-                <xs:element name="posicao" type="xs:positiveInteger"/>
-                <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
-        </xs:complexType>
-    </xs:element>
-
-    <!-- Elemento Complexo ClubeDiretor-->
-    <xs:element name="clubeDiretor">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="diretor" minOccurs="1" maxOccurs="1"/>
-                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
-        </xs:complexType>
-    </xs:element>
-
-    <!-- Elemento Complexo ClubePatrocinador-->
-    <xs:element name="clubePatrocinador">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="patrocinador" minOccurs="1" maxOccurs="unbounded"/>
-                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="torcidaOrganizada" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -108,7 +92,7 @@
     <xs:element name="clube">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="nome" type="xs:string" maxLength="50"/>
+                <xs:element name="nome" type="xs:string"/>
 				<xs:element name="Jogador1" type="xs:positiveInteger"/>
 				<xs:element name="Jogador2" type="xs:positiveInteger"/>
 				<xs:element name="Jogador3" type="xs:positiveInteger"/>
@@ -125,6 +109,10 @@
 				<xs:element name="Jogador14" type="xs:positiveInteger"/>
 				<xs:element name="Jogador15" type="xs:positiveInteger"/>
 				<xs:element name="Jogador16" type="xs:positiveInteger"/>
+                <xs:element ref="torcidaOrganizada"/>
+                <xs:element ref="tecnico"/>
+                <xs:element ref="diretores"/>
+                <xs:element ref="patrocinadores"/>
             </xs:sequence>
 			<xs:attribute name="id" type="xs:positiveInteger" use="required" />
         </xs:complexType>
@@ -139,7 +127,7 @@
         </xs:complexType>
     </xs:element>
 	
-    <!-- Elemento Complexo Rodadas-->
+    <!-- Elemento Complexo Rodada -->
     <xs:element name="rodada">
         <xs:complexType>
             <xs:sequence>
@@ -159,11 +147,63 @@
         </xs:complexType>
     </xs:element>
 
-	<!-- Elemento Complexo Rodadas-->
+	<!-- Elemento Complexo Rodadas -->
     <xs:element name="rodadas">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="rodada" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo ClassificacaoGeral-->
+    <xs:element name="classificacaoGeral">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="campeonato"/>
+                <xs:element name="posicao" type="xs:positiveInteger"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo ClassificaçõesGerais -->
+    <xs:element name="classificacoesGerais">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="classificacaoGeral" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo Tecnico-->
+    <xs:element name="tecnico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo ClubeDiretor-->
+    <xs:element name="clubeDiretor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="diretor" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Elemento Complexo ClubePatrocinador-->
+    <xs:element name="clubePatrocinador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="patrocinador" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="clube" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -172,11 +212,12 @@
     <xs:element name="campeonato">
         <xs:complexType>
             <xs:sequence>
-				<xs:element name="Nome" type="xs:string" maxLength="50"/>
-				<xs:element name="Ano" type="xs:positiveInteger"/>
-				<xs:element name="NroClubes" type="xs:positiveInteger"/>
+				<xs:element name="nome" type="xs:string" />
+				<xs:element name="ano" type="xs:positiveInteger"/>
+				<xs:element name="nroClubes" type="xs:positiveInteger"/>
                 <xs:element ref="clubes" minOccurs="1" maxOccurs="unbounded"/>
                 <xs:element ref="rodadas" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref="classificacoesGerais" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
 			<xs:attribute name="id" type="xs:positiveInteger" use="required" />
         </xs:complexType>
