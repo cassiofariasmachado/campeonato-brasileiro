@@ -2,12 +2,14 @@ package br.unisinos.bd2.campeonato.brasileiro.jpa.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+@Entity
 public class ClubePatrocinador implements Serializable {
 
 	// Atributos

@@ -3,18 +3,22 @@
 <persistence-unit name="bd2" transaction-type="RESOURCE_LOCAL">
 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-	<class>br.unisinos.bd2.campeonato.brasileiro.Campeonato</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.ClassificacaoGeral</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.Clube</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.ClubeDiretor</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.ClubePatrocinador</class>	
-	<class>br.unisinos.bd2.campeonato.brasileiro.ClubeTorcida</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.Diretor</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.Jogador</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.Patrocinador</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.Posicao</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.Tecnico</class>
-	<class>br.unisinos.bd2.campeonato.brasileiro.TorcidaOrganizada</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Campeonato</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.ClassificacaoGeral</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.ClassificacaoRodada</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Clube</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.ClubeDiretor</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.ClubePatrocinador</class>	
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.ClubeTorcida</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Diretor</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Jogos</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Jogador</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Patrocinador</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Posicao</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Rodadas</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.Tecnico</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.TecnicoClube</class>
+	<class>br.unisinos.bd2.campeonato.brasileiro.jpa.model.TorcidaOrganizada</class>
 	
     
     <properties>

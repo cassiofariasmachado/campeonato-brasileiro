@@ -22,14 +22,6 @@ public class TecnicoClube {
 	@ManyToOne (optional = false)
  	private Tecnico idTecnico;
 	
- 	// Construtor
- 	public TecnicoClube(Long idTecnicoClube, Clube idClube, Tecnico idTecnico) {
-		super();
-		this.idTecnicoClube = idTecnicoClube;
-		this.idClube = idClube;
-		this.idTecnico = idTecnico;
-	}
- 	
 	// Métodos
  	public Long getIdTecnicoClube() {
 		return idTecnicoClube;
