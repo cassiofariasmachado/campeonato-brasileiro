@@ -89,26 +89,27 @@
     <xs:element name="clube">
         <xs:complexType>
             <xs:sequence>
-				<xs:element name="Jogador1" type="xs:positiveInteger"/>
-				<xs:element name="Jogador2" type="xs:positiveInteger"/>
-				<xs:element name="Jogador3" type="xs:positiveInteger"/>
-				<xs:element name="Jogador4" type="xs:positiveInteger"/>
-				<xs:element name="Jogador5" type="xs:positiveInteger"/>
-				<xs:element name="Jogador6" type="xs:positiveInteger"/>
-				<xs:element name="Jogador7" type="xs:positiveInteger"/>
-				<xs:element name="Jogador8" type="xs:positiveInteger"/>
-				<xs:element name="Jogador9" type="xs:positiveInteger"/>
-				<xs:element name="Jogador10" type="xs:positiveInteger"/>
-				<xs:element name="Jogador11" type="xs:positiveInteger"/>
-				<xs:element name="Jogador12" type="xs:positiveInteger"/>
-				<xs:element name="Jogador13" type="xs:positiveInteger"/>
-				<xs:element name="Jogador14" type="xs:positiveInteger"/>
-				<xs:element name="Jogador15" type="xs:positiveInteger"/>
-				<xs:element name="Jogador16" type="xs:positiveInteger"/>
+				<xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
+                <xs:element ref="jogador"/>
                 <xs:element ref="torcidaOrganizada"/>
                 <xs:element ref="tecnico"/>
                 <xs:element ref="diretores"/>
                 <xs:element ref="patrocinadores"/>
+                <xs:element ref="posicoes"/>
             </xs:sequence>
 			<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 			<xs:attribute name="nome" type="tipoNome" use="required" />
@@ -148,14 +149,14 @@
     <xs:element name="jogos">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="clube1Gol" type="xs:positiveInteger"/>
-                <xs:element name="clube2Gol" type="xs:positiveInteger"/>
-                <xs:element name="clube1Ponto" type="xs:positiveInteger"/>
-                <xs:element name="clube2Ponto" type="xs:positiveInteger"/>
-                <xs:element name="clube1Amarelo" type="xs:positiveInteger"/>
-                <xs:element name="clube2Amarelo" type="xs:positiveInteger"/>
-                <xs:element name="clube1Vermelho" type="xs:positiveInteger"/>
-                <xs:element name="clube2Vermelho" type="xs:positiveInteger"/>
+                <xs:element name="clube1Gol" type="xs:integer"/>
+                <xs:element name="clube2Gol" type="xs:integer"/>
+                <xs:element name="clube1Ponto" type="xs:integer"/>
+                <xs:element name="clube2Ponto" type="xs:integer"/>
+                <xs:element name="clube1Amarelo" type="xs:integer"/>
+                <xs:element name="clube2Amarelo" type="xs:integer"/>
+                <xs:element name="clube1Vermelho" type="xs:integer"/>
+                <xs:element name="clube2Vermelho" type="xs:integer"/>
             </xs:sequence>
             <xs:attribute name="idCampeonato" type="xs:positiveInteger" use="required" />
             <xs:attribute name="idRodada" type="xs:positiveInteger" use="required" />
@@ -335,86 +336,6 @@
         <xs:keyref name="fk_classificacaoGeral_clube" refer="pk_clube">
             <xs:selector xpath="classificacaoGeral"/>
             <xs:field xpath="idClube"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador1" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador1"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador2" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador2"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador3" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador3"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador4" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador4"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador5" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador5"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador6" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador6"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador7" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador7"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador8" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador8"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador9" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador9"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador10" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador10"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador11" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador11"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador12" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador12"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador13" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador13"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador14" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador14"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador15" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador15"/>
-        </xs:keyref>
-        
-        <xs:keyref name="fk_clube_jogador16" refer="pk_jogador">
-            <xs:selector xpath="campeonato/clubes/clube"/> 
-            <xs:field xpath="Jogador16"/>
         </xs:keyref>
         
         <xs:keyref name="fk_jogos_campeonato" refer="pk_campeonato">
