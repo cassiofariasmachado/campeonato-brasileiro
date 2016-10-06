@@ -47,7 +47,7 @@
     <clube1Vermelho>50</clube1Vermelho>
     <clube2Vermelho>50</clube2Vermelho>
    </jogos>
-   <jogos idCampeonato="50" idRodada="50" idClube1="50" idClube2="50" id="50">
+   <jogos idCampeonato="1" idRodada="50" idClube1="1" idClube2="1" id="50">
     <clube1Gol>1</clube1Gol>
     <clube2Gol>1</clube2Gol>
     <clube1Ponto>50</clube1Ponto>
@@ -63,7 +63,7 @@
   </rodadas>
   <classificacoesGerais>
     <classificacaoGeral id="1">
-        <posicao>1</posicao>
+        <posicaoClassificacao>1</posicaoClassificacao>
         <idClube>1</idClube>
       </classificacaoGeral>
    </classificacoesGerais>

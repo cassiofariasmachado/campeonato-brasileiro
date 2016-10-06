@@ -186,7 +186,7 @@
     <xs:element name="classificacaoGeral">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="posicao" type="xs:positiveInteger"/>
+                <xs:element name="posicaoClassificacao" type="xs:positiveInteger"/>
                 <xs:element name="idClube" type="xs:positiveInteger"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
