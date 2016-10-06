@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<campeonatos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/C:/Users/Aline/Documents/Unisinos/Banco%20de%20Dados%20II/Trabalhos/T1%20GA/Mapeamento/BancoDeDadosII_CampeonatoBrasileiro/banco_de_dados_II-trabalho2/campeonato.xsd"></campeonatos>
+    <campeonato id="50">
+        <ano>50</ano>
+        <nroClubes>50</nroClubes>
+        <clubes>
+            <clube id="50" nome="nome1">
+                <Jogador1>50</Jogador1>
+                <Jogador2>50</Jogador2>
+                <Jogador3>50</Jogador3>
+                <Jogador4>50</Jogador4>
+                <Jogador5>50</Jogador5>
+                <Jogador6>50</Jogador6>
+                <Jogador7>50</Jogador7>
+                <Jogador8>50</Jogador8>
+                <Jogador9>50</Jogador9>
+                <Jogador10>50</Jogador10>
+                <Jogador11>50</Jogador11>
+                <Jogador12>50</Jogador12>
+                <Jogador13>50</Jogador13>
+                <Jogador14>50</Jogador14>
+                <Jogador15>50</Jogador15>
+                <Jogador16>50</Jogador16>
+                <torcidaOrganizada id="50"/>
+                <tecnico id="50"/>
+                <diretores>
+                    <diretor id="50"/>
+                    <diretor id="50"/>
+                </diretores>
+                <patrocinadores>
+                    <patrocinador id="50"/>
+                    <patrocinador id="50"/>
+                </patrocinadores>
+            </clube>
+            <clube id="50" nome="nome8">
+                <Jogador1>50</Jogador1>
+                <Jogador2>50</Jogador2>
+                <Jogador3>50</Jogador3>
+                <Jogador4>50</Jogador4>
+                <Jogador5>50</Jogador5>
+                <Jogador6>50</Jogador6>
+                <Jogador7>50</Jogador7>
+                <Jogador8>50</Jogador8>
+                <Jogador9>50</Jogador9>
+                <Jogador10>50</Jogador10>
+                <Jogador11>50</Jogador11>
+                <Jogador12>50</Jogador12>
+                <Jogador13>50</Jogador13>
+                <Jogador14>50</Jogador14>
+                <Jogador15>50</Jogador15>
+                <Jogador16>50</Jogador16>
+                <torcidaOrganizada id="50"/>
+                <tecnico id="50"/>
+                <diretores>
+                    <diretor id="50"/>
+                    <diretor id="50"/>
+                </diretores>
+                <patrocinadores>
+                    <patrocinador id="50"/>
+                    <patrocinador id="50"/>
+                </patrocinadores>
+            </clube>
+        </clubes>
+        <rodadas id="50">
+            <jogos idCampeonato="50" idRodada="50" idClube1="50" idClube2="50" id="50">
+                <clube1Gol>50</clube1Gol>
+                <clube2Gol>50</clube2Gol>
+                <clube1Ponto>50</clube1Ponto>
+                <clube2Ponto>50</clube2Ponto>
+                <clube1Amarelo>50</clube1Amarelo>
+                <clube2Amarelo>50</clube2Amarelo>
+                <clube1Vermelho>50</clube1Vermelho>
+                <clube2Vermelho>50</clube2Vermelho>
+            </jogos>
+            <jogos idCampeonato="50" idRodada="50" idClube1="50" idClube2="50" id="50">
+                <clube1Gol>50</clube1Gol>
+                <clube2Gol>50</clube2Gol>
+                <clube1Ponto>50</clube1Ponto>
+                <clube2Ponto>50</clube2Ponto>
+                <clube1Amarelo>50</clube1Amarelo>
+                <clube2Amarelo>50</clube2Amarelo>
+                <clube1Vermelho>50</clube1Vermelho>
+                <clube2Vermelho>50</clube2Vermelho>
+            </jogos>
+            <classificacoesRodadas>
+                <classificacaoRodada id="50" idCampeonato="50" idRodada="50" posicao="50" idClube="50"/>
+                <classificacaoRodada id="50" idCampeonato="50" idRodada="50" posicao="50" idClube="50"/>
+            </classificacoesRodadas>
+        </rodadas>
+        <classificacoesGerais>
+            <classificacaoGeral id="50">
+                <posicao>50</posicao>
+                <idClube>50</idClube>
+            </classificacaoGeral>
+            <classificacaoGeral id="50">
+                <posicao>50</posicao>
+                <idClube>50</idClube>
+            </classificacaoGeral>
+        </classificacoesGerais>
+    </campeonato>
+</campeonatos>
